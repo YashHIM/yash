@@ -40,7 +40,7 @@ public class VehicleController {
 		List<VehicleResponseDTO> vehicles = vehicleService.getAllVehicles();
 
 		if (vehicles.isEmpty()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No vehicle found.");
+			return ResponseEntity.status(HttpStatus.OK).body("No vehicle found.");
 		} else {
 			return ResponseEntity.status(HttpStatus.OK).body(vehicles);
 		}

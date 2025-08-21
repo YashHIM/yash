@@ -39,7 +39,7 @@ public class DealerController {
 		List<DealerResponseDTO> dealers = dealerService.getAllDealers();
 
 		if (dealers.isEmpty()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No dealer found.");
+			return ResponseEntity.status(HttpStatus.OK).body("No dealer found.");
 		} else {
 			return ResponseEntity.status(HttpStatus.OK).body(dealers);
 		}
